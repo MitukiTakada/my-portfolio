@@ -1,0 +1,483 @@
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin: 40px 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  margin-left: 0;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+}
+
+header .face {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+header .face img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+header .site-title {
+  position: absolute;
+  color: #fff;
+  left: 45%;
+  top: 20px;
+  font-size: 1.5rem;
+}
+
+header .site-title a {
+  color: #fff;
+  font-family: 'Beau Rivage', cursive;
+}
+
+header nav {
+  background-color: black;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: -150px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header nav ul {
+  padding: 20px 50px;
+}
+
+header nav ul li {
+  margin: 0 0 50px 0;
+}
+
+header nav ul li a {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+header nav.open {
+  left: 0;
+}
+
+header .humberger {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  z-index: 40;
+}
+
+header .humberger span {
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: 6px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header .humberger span:nth-child(1) {
+  top: 11px;
+}
+
+header .humberger span:nth-child(2) {
+  top: 21px;
+}
+
+header .humberger span:nth-child(3) {
+  top: 31px;
+}
+
+header .humberger.open span:nth-child(1) {
+  top: 21px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header .humberger.open span:nth-child(2), header .humberger.open span:nth-child(3) {
+  top: 21px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+main {
+  background-color: black;
+  color: #fff;
+}
+
+main .introduction {
+  width: 500px;
+  margin-top: 25px;
+}
+
+main .introduction .introduction-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .introduction .introduction-contents img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 10px 10px 0 0;
+}
+
+main .introduction .name {
+  color: #737d6d;
+  text-align: center;
+}
+
+.main-visual h1 {
+    z-index: 10;
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    font-size: 40px;
+}
+
+main .introduction p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+main .works {
+  margin-top: 50px;
+}
+
+main .works .works-contents ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .works .works-contents ul li {
+  margin: 10px;
+  width: 45%;
+  border-radius: 15px;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+main .works .works-contents ul li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+main .works .works-contents ul li a {
+  color: #fff;
+}
+
+main .works .works-contents ul li img {
+  height: 300px;
+  width: 400px;
+  border-radius: 20px;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+main .works .works-contents ul li.fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+main .works .works-contents ul li.fade-in.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+main .skills .main-skills {
+  margin-bottom: 60px;
+}
+
+main .skills .main-skills p {
+  text-align: center;
+}
+
+main .skills .next-skills {
+  margin-bottom: 60px;
+}
+
+main .skills .next-skills p {
+  text-align: center;
+}
+
+main .skills .skills-contents ul li {
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #bea76f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+main .skills .skills-contents ul li img {
+  width: 50px;
+  height: 50px;
+}
+
+main .skills .skills-contents ul li p {
+  font-size: 0.75rem;
+}
+
+main .skills .skills-contents ul li.fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+main .skills .skills-contents ul li.fade-in.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+main .skills .skills-contents ul li .skill-explanation {
+  margin-left: 150px;
+}
+
+main .skills .skills-contents ul li .skill-explanation p {
+  text-align: left;
+}
+
+main .skills .skills-contents .border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+main .skills .skills-contents .border::before {
+  border-top: 1px solid;
+  content: "";
+  width: 20%;
+}
+
+main .skills .skills-contents .border::after {
+  border-top: 1px solid;
+  content: "";
+  width: 20%;
+}
+
+main .contact {
+  text-align: center;
+  position: relative;
+}
+
+main .contact .contact-contents .to-top a {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+main .contact .contact-contents .to-top a::after {
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+}
+
+main .contact .contact-contents p {
+  margin: 0;
+  padding: 20px 0;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+}
+
+footer .footer-contents {
+  border-top: 1px solid #bea76f;
+}
+
+footer p {
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    position: relative;
+  }
+  header .face {
+    display: none;
+  }
+  header .site-title {
+    left: 15px;
+    font-size: 1.25rem;
+  }
+  header nav {
+    height: 40vh;
+  }
+  header .humberger {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  main .section-title {
+    margin: 20px 0;
+  }
+  main .section-title h1 {
+    font-size: 1.5rem;
+  }
+  main .main-visual {
+    height: 50vh;
+    width: 100%;
+  }
+  main .introduction .name {
+    color: #fff;
+  }
+  main .introduction .introduction-contents img {
+    height: 80px;
+    width: 80px;
+  }
+  main .introduction p {
+    font-size: 0.65rem;
+    opacity: 1;
+  }
+  main .works .works-contents ul {
+    padding-left: 0;
+  }
+  main .works .works-contents ul li {
+    width: 100%;
+    margin-top: 40px;
+  }
+  main .works .works-contents ul li .skill-explanation p {
+    font-size: 0.75rem;
+  }
+  main .works .works-contents ul li a {
+    font-size: 0.75rem;
+  }
+  main .works .works-contents ul li img {
+    width: 100%;
+    height: 400px;
+  }
+  main .skills .main-skills, main .skills .next-skills {
+    margin-bottom: 30px;
+  }
+  main .skills .main-skills .border, main .skills .next-skills .border {
+    font-size: 0.75rem;
+  }
+  main .skills .skills-contents ul {
+    padding-left: 0;
+  }
+  main .contact .contact-contents p {
+    font-size: 0.75rem;
+  }
+}
+.main-visual {
+  background-image: url("https://cdn.pixabay.com/photo/2020/01/04/12/38/winter-4740522_1280.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.main-visual::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.4;
+}
+.snow {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: snowFall 10s linear;
+  z-index: 10;
+  opacity: 0.7;
+}
+@keyframes snowFall {
+  0% {
+    opacity: 0;
+    top: 0;
+    transform: translateX(5px);
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60% {
+    transform: translateX(5px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-5px);
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    top: 100vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

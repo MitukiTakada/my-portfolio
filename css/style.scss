@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+}
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  margin: 40px 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  margin-left: 0;
+}
+header {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  & .face {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    & img {
+      width: 46px;
+      height: 45px;
+      border-radius: 50%;
+    }
+  }
+  & .site-title {
+    position: absolute;
+    color: #fff;
+    left: 45%;
+    top: 20px;
+    font-size: 1.5rem;
+    & a {
+      color: #fff;
+      font-family: 'Beau Rivage', cursive;
+    }
+  }
+  & nav {
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: -150px;
+    transition: .5s;
+    & ul {
+      padding: 20px 50px;
+      & li {
+        margin: 0 0 50px 0;
+        & a {
+          font-size: 0.75rem;
+          color: #fff;
+        }
+      }
+    }
+    &.open {
+      left: 0;
+    }
+  }
+  & .humberger {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 40;
+    & span {
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      left: 6px;
+      transition: 0.5s ease-in-out;
+      &:nth-child(1) {
+        top: 11px;
+      }
+      &:nth-child(2) {
+        top: 21px;
+      }
+      &:nth-child(3) {
+        top: 31px;
+      }
+    }
+    &.open {
+      & span {
+        &:nth-child(1) {
+          top: 21px;
+          left: 6px;
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2),&:nth-child(3) {
+          top: 21px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+main {
+  background-color: black;
+  color: #fff;
+  & .main-visual {
+    height: 90vh;
+    width: 100%;
+    background-image: url(img/snow-mountain.jpg);
+  }
+  & .introduction {
+    width: 500px;
+    margin-top: 25px;
+    & .introduction-contents {
+      display: flex;
+      & img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 10px 10px 0 0;
+      }
+    }
+    & .name {
+      color: #737d6d;
+      text-align: center;
+    }
+    & p {
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  }
+  & .works {
+    margin-top: 50px;
+    & .works-contents {
+      & ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & li {
+          margin: 10px;
+          width: 45%;
+          border-radius: 15px;
+          transition: .7s;
+          &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+          }
+          & a {
+            color: #fff;
+          }
+          & img {
+            height: 300px; 
+            width: 400px;
+            border-radius: 20px;
+            transition: .7s;
+          }
+          &.fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+            &.show {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+  & .skills {
+    & .main-skills {
+      margin-bottom: 60px;
+      & p {
+        text-align: center;
+      }
+    }
+    & .next-skills {
+      margin-bottom: 60px;
+      & p {
+        text-align: center;
+      }
+    }
+    & .skills-contents {
+      & ul {
+        & li {
+          padding: 30px 20px;
+          display: flex;
+          border-bottom: 1px solid rgb(190, 167, 111);
+          align-items: center;
+          transition: 0.6s;
+          & img {
+            width: 50px;
+            height: 50px;
+          }
+          & p {
+            font-size: 0.75rem;
+          }
+          &.fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+            &.show {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          & .skill-explanation {
+            & p {
+              text-align: left;
+            }
+            margin-left: 150px;
+          }
+        }
+      }
+      & .border {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
+        margin-bottom: 60px;
+        text-align: center;
+        &::before {
+          border-top: 1px solid;
+          content: "";
+          width: 20%;
+        }
+        &::after {
+          border-top: 1px solid;
+          content: "";
+          width: 20%;
+        }
+      }
+    }
+  }
+  & .contact {
+    text-align: center;
+    position: relative;
+    & .contact-contents {
+      & .to-top {
+        & a {
+          width: 50px;
+          height: 50px;
+          background-color: black;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          position: fixed;
+          bottom: 25px;
+          right: 25px;
+          &::after {
+            content: "";
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #fff;
+            position: relative;
+            left: 0px;
+            bottom: 0px;
+          }
+        }
+      }
+      & p {
+        margin: 0;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+footer {
+  background-color: black;
+  color: #fff;
+  & .footer-contents {
+    border-top: 1px solid rgb(190, 167, 111);
+  }
+  & p {
+    margin: 0;
+    padding: 30px 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  header {
+    position: relative;
+    & .face {
+      display: none;
+    }
+    & .site-title {
+      left: 15px;
+      font-size: 1.25rem;
+    }
+    & nav {
+      height: 40vh;
+    }
+    & .humberger {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+  }
+  main {
+    & .section-title {
+      margin: 20px 0;
+      & h1 {
+        font-size: 1.5rem;
+      }
+    }
+    & .main-visual {
+      margin-top: 50px;
+      height: 50vh;
+      width: 100%;
+    }
+    & .introduction {
+      & .name {
+        color: #fff;
+      }
+      & .introduction-contents {
+        & img {
+          height: 80px;
+          width: 80px;
+        }
+      }
+      & p {
+        font-size: 0.65rem;
+        opacity: 1;
+      }
+    }
+    & .works {
+      & .works-contents {
+        & ul {
+          padding-left: 0;
+          & li {
+            width: 100%;
+            & .skill-explanation {
+              & p {
+                font-size: 0.75rem;
+              }
+            }
+            & a {
+              font-size: 0.75rem;
+            }
+            & img {
+              width: 100%;
+              height: 400px;
+            }
+          }
+        }
+      }
+    }
+    & .skills {
+      & .main-skills, .next-skills {
+        margin-bottom: 30px;
+        & .border {
+          font-size: 0.75rem;
+        }
+      }
+      & .skills-contents {
+        & ul {
+          padding-left: 0;
+        }
+      }
+    }
+    & .contact {
+      & .contact-contents {
+        & p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+  }
+}
+
+.main-visual {
+  & h1 {
+    z-index: 10;
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    font-size: 40px;
+  }
+}
+
